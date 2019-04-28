@@ -1,0 +1,34 @@
+name:                th-optics
+version:             0.1.0.0
+github:              "8084/th-optics"
+license:             BSD3
+author:              "Klntsky"
+maintainer:          "klntsky@gmail.com"
+copyright:           "2019 klntsky"
+
+extra-source-files:
+- README.md
+
+description:         Optics for TemplateHaskell AST data types.
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+  exposed-modules:
+  - Language.Haskell.TH.Syntax.Optics
+  dependencies:
+  - lens
+  - template-haskell
+
+tests:
+  th-optics-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - th-optics

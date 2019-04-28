@@ -1,0 +1,23 @@
+name:                th-optics-builder
+version:             0.1.0.0
+github:              "8084/th-optics"
+license:             BSD3
+author:              "Klntsky"
+maintainer:          "klntsky@gmail.com"
+copyright:           "2019 klntsky"
+description:         Builder for th-optics.
+
+dependencies:
+- base >= 4.7 && < 5
+- lens
+- haskell-src-exts
+- template-haskell
+
+executables:
+  th-optics-builder:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N

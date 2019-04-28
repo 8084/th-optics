@@ -1,0 +1,5 @@
+.stack-work/
+th-optics.cabal
+template-haskell-*/
+out/
+builder/app/Language/Haskell/TH/Data.hs
